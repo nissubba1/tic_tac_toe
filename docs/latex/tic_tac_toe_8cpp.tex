@@ -1,0 +1,202 @@
+\doxysection{tic\+Tac\+Toe.\+cpp File Reference}
+\hypertarget{tic_tac_toe_8cpp}{}\label{tic_tac_toe_8cpp}\index{ticTacToe.cpp@{ticTacToe.cpp}}
+
+
+Implementation of Tic Tac Toe.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a266305a842d4c0086470f26fc3a1721f}{game\+Board}} (char board\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initializes the game board with empty spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a9aef71237a1168826348a9eaefef8fa7}{display\+Board}} (char board\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Displays the current state of the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a7e518923b81a0e52baac4e985ec8e28c}{fill\+Board}} (char board\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int row, int col, char letter, bool \&legal\+Move)
+\begin{DoxyCompactList}\small\item\em Fill a position on the board with a player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_aeea44530e6f3dd4f11a80541813df302}{get\+Position}} (int \&row, int \&col, int \&cur\+Position)
+\begin{DoxyCompactList}\small\item\em Prompts the current player to enter the row and column for their move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{tic_tac_toe_8cpp_ae46b3a70a3087b1c53beec529fbb25d0}{game\+Over}} (char board\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks if the game is over due to all positions being filled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a1ca05de480ca74adc851626a796b1b10}{change\+Player}} (int \&cur\+Player)
+\begin{DoxyCompactList}\small\item\em Switches the turn to the other player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a5d27c0f86abffb2d2907b2c9f56d074c}{check\+Win}} (char board\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, bool \&is\+Over, bool \&is\+Draw)
+\begin{DoxyCompactList}\small\item\em Checks if a player has won or if the game has ended in a draw. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tic_tac_toe_8cpp_a2420ba152bd924e064eb32c03bc18f10}{winner\+Message}} (int cur\+Player)
+\begin{DoxyCompactList}\small\item\em Displays a message announcing the winner. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tic_tac_toe_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to run the Tic-\/\+Tac-\/\+Toe game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Tic Tac Toe. 
+
+This program allows two players to play a game of Tic-\/\+Tac-\/\+Toe in the terminal. The game supports alternating turns, win conditions, and a draw message.
+
+\begin{DoxyAuthor}{Author}
+Nishan Subba @github \href{https://github.com/nisSubba2024}{\texttt{ https\+://github.\+com/nis\+Subba2024}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/08/25 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tic_tac_toe_8cpp_a1ca05de480ca74adc851626a796b1b10}\index{ticTacToe.cpp@{ticTacToe.cpp}!changePlayer@{changePlayer}}
+\index{changePlayer@{changePlayer}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{changePlayer()}{changePlayer()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a1ca05de480ca74adc851626a796b1b10} 
+void change\+Player (\begin{DoxyParamCaption}\item[{int \&}]{cur\+Player}{}\end{DoxyParamCaption})}
+
+
+
+Switches the turn to the other player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+Player} & The current player\textquotesingle{}s identifier (0 for \textquotesingle{}O\textquotesingle{}, 1 for \textquotesingle{}X\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_a5d27c0f86abffb2d2907b2c9f56d074c}\index{ticTacToe.cpp@{ticTacToe.cpp}!checkWin@{checkWin}}
+\index{checkWin@{checkWin}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{checkWin()}{checkWin()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a5d27c0f86abffb2d2907b2c9f56d074c} 
+void check\+Win (\begin{DoxyParamCaption}\item[{char}]{board}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{bool \&}]{is\+Over}{, }\item[{bool \&}]{is\+Draw}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a player has won or if the game has ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A 2D array representing the game board. \\
+\hline
+{\em is\+Over} & Indicates whether the game is over. \\
+\hline
+{\em is\+Draw} & Indicates whether the game ended in a draw. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_a9aef71237a1168826348a9eaefef8fa7}\index{ticTacToe.cpp@{ticTacToe.cpp}!displayBoard@{displayBoard}}
+\index{displayBoard@{displayBoard}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{displayBoard()}{displayBoard()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a9aef71237a1168826348a9eaefef8fa7} 
+void display\+Board (\begin{DoxyParamCaption}\item[{char}]{board}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Displays the current state of the game board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A 2D array representing the game board. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_a7e518923b81a0e52baac4e985ec8e28c}\index{ticTacToe.cpp@{ticTacToe.cpp}!fillBoard@{fillBoard}}
+\index{fillBoard@{fillBoard}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{fillBoard()}{fillBoard()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a7e518923b81a0e52baac4e985ec8e28c} 
+void fill\+Board (\begin{DoxyParamCaption}\item[{char}]{board}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{char}]{letter}{, }\item[{bool \&}]{legal\+Move}{}\end{DoxyParamCaption})}
+
+
+
+Fill a position on the board with a player\textquotesingle{}s symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A 2D array representing the game board. \\
+\hline
+{\em row} & The row index of the desired position. \\
+\hline
+{\em col} & The column index of the desired position. \\
+\hline
+{\em letter} & The symbol of the player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}). \\
+\hline
+{\em legal\+Move} & Indicates whether the move was valid. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_a266305a842d4c0086470f26fc3a1721f}\index{ticTacToe.cpp@{ticTacToe.cpp}!gameBoard@{gameBoard}}
+\index{gameBoard@{gameBoard}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{gameBoard()}{gameBoard()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a266305a842d4c0086470f26fc3a1721f} 
+void game\+Board (\begin{DoxyParamCaption}\item[{char}]{board}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Initializes the game board with empty spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A 2D array representing the game board. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_ae46b3a70a3087b1c53beec529fbb25d0}\index{ticTacToe.cpp@{ticTacToe.cpp}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{gameOver()}{gameOver()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_ae46b3a70a3087b1c53beec529fbb25d0} 
+bool game\+Over (\begin{DoxyParamCaption}\item[{char}]{board}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Checks if the game is over due to all positions being filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & A 2D array representing the game board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the board is completely filled. 
+
+false If there are still empty positions on the board. 
+\end{DoxyReturn}
+\Hypertarget{tic_tac_toe_8cpp_aeea44530e6f3dd4f11a80541813df302}\index{ticTacToe.cpp@{ticTacToe.cpp}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_aeea44530e6f3dd4f11a80541813df302} 
+void get\+Position (\begin{DoxyParamCaption}\item[{int \&}]{row}{, }\item[{int \&}]{col}{, }\item[{int \&}]{cur\+Position}{}\end{DoxyParamCaption})}
+
+
+
+Prompts the current player to enter the row and column for their move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row index provided by the player. \\
+\hline
+{\em col} & The column index provided by the player. \\
+\hline
+{\em cur\+Position} & The current player\textquotesingle{}s identifier (0 for \textquotesingle{}O\textquotesingle{}, 1 for \textquotesingle{}X\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tic_tac_toe_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{ticTacToe.cpp@{ticTacToe.cpp}!main@{main}}
+\index{main@{main}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function to run the Tic-\/\+Tac-\/\+Toe game. 
+
+Initializes the game board and alternates turns between two players. Checks for win conditions or a draw after each move.
+
+\begin{DoxyReturn}{Returns}
+int Exit status of the program. 
+\end{DoxyReturn}
+\Hypertarget{tic_tac_toe_8cpp_a2420ba152bd924e064eb32c03bc18f10}\index{ticTacToe.cpp@{ticTacToe.cpp}!winnerMessage@{winnerMessage}}
+\index{winnerMessage@{winnerMessage}!ticTacToe.cpp@{ticTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{winnerMessage()}{winnerMessage()}}
+{\footnotesize\ttfamily \label{tic_tac_toe_8cpp_a2420ba152bd924e064eb32c03bc18f10} 
+void winner\+Message (\begin{DoxyParamCaption}\item[{int}]{cur\+Player}{}\end{DoxyParamCaption})}
+
+
+
+Displays a message announcing the winner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+Player} & The identifier of the winning player (0 for \textquotesingle{}O\textquotesingle{}, 1 for \textquotesingle{}X\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
