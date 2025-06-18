@@ -23,7 +23,7 @@ You can access the detailed documentation for the project [here](https://nissubb
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/nisSubba2024/tic_tac_toe.git
+git clone https://github.com/nissubba1/tic_tac_toe.git
 cd tic_tac_toe
 ```
 
